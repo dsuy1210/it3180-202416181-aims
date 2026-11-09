@@ -25,3 +25,15 @@ class Cart:
     def total_cost(self):
         """Calculate total cost of all DVDs in cart."""
         return sum(dvd.cost for dvd in self.items)
+
+    def print_cart(self):
+        """Print the contents of the cart."""
+        if not self.items:
+            print("The cart is empty.")
+            return
+        print("***********************CART***********************")
+        print("Ordered Items:")
+        for i, dvd in enumerate(self.items, 1):
+            print(f"{i}. {dvd}")
+        print(f"Total cost: {self.total_cost()} $")
+        print("***************************************************")
