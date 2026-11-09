@@ -17,6 +17,9 @@ def main():
     # Display total cost
     print(f"Total cost: {cart.total_cost()} $")
 
+    # Show cart details
+    cart.print_cart()
+
 
 if __name__ == "__main__":
     main()
